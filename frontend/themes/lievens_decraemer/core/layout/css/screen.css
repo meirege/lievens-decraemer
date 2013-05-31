@@ -1,0 +1,577 @@
+/* line 6, ../sass/screen.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 16, ../sass/screen.scss */
+article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 19, ../sass/screen.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../sass/screen.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 25, ../sass/screen.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 28, ../sass/screen.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 32, ../sass/screen.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*--- Code voor SASS ---*/
+/*----------------------*/
+/*   =GENERAL ELEMENTS  */
+/*----------------------*/
+/* --- Fonts aanmaken --- */
+@font-face {
+  font-family: "NothingYouCouldDo";
+  src: url("../fonts/nothingyoucoulddo-webfont.eot?") format("eot"), url("../fonts/nothingyoucoulddo-webfont.woff") format("woff"), url("../fonts/nothingyoucoulddo-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*----------------------*/
+/*   =GENERAL ELEMENTS   */
+/*----------------------*/
+/* --- Algemeen --- */
+/* line 73, ../sass/screen.scss */
+body {
+  background-color: #ffffff;
+  color: #585757;
+  font-family: "Lucida Sans Unicode", Arial, "sans serif";
+  font-size: 1em;
+  font-weight: lighter;
+  position: relative;
+}
+
+/* line 82, ../sass/screen.scss */
+#skipToContent, #socialMedia span {
+  position: absolute;
+  top: -10000px;
+}
+
+/* line 87, ../sass/screen.scss */
+a {
+  color: #fbd744;
+  text-decoration: none;
+}
+
+/* line 92, ../sass/screen.scss */
+br {
+  clear: both;
+}
+
+/*----------------------*/
+/*   =GENERAL CLASSES   */
+/*----------------------*/
+/* --- Algemeen --- */
+/* line 102, ../sass/screen.scss */
+.dummy {
+  clear: both;
+  height: 0px;
+}
+
+/* line 107, ../sass/screen.scss */
+.baseline {
+  border-bottom: 1px solid #eeeeee;
+  color: #dddddd;
+  font-family: "Raleway" serif;
+  font-size: 2em;
+  font-weight: 100;
+  height: 116px;
+  line-height: 125%;
+  padding-top: 20px;
+  text-align: right;
+}
+/* line 119, ../sass/screen.scss */
+.baseline .baseline_author {
+  font-size: 0.5em;
+}
+
+/*----------------------*/
+/* =CONTAINING ELEMENTS */
+/*----------------------*/
+/* --- ALGEMEEN --- */
+/* line 129, ../sass/screen.scss */
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: relative;
+  width: 920px;
+}
+
+/* --- HEADER --- */
+/* line 138, ../sass/screen.scss */
+#header_wrapper {
+  border-bottom: 1px solid #eeeeee;
+  height: 97px;
+  margin-bottom: 25px;
+}
+
+/* line 144, ../sass/screen.scss */
+#header {
+  background-repeat: no-repeat;
+  font-weight: 100;
+  margin-top: 55px;
+}
+/* line 149, ../sass/screen.scss */
+#header a {
+  color: #7f7e7e;
+}
+/* line 152, ../sass/screen.scss */
+#header span {
+  color: #585757;
+}
+
+/* --- MENU --- */
+/* line 159, ../sass/screen.scss */
+#header, #menu {
+  float: left;
+  width: 306px;
+}
+
+/* line 164, ../sass/screen.scss */
+#menu {
+  font-size: 0.85em;
+  font-weight: normal;
+  margin-top: 55px;
+  text-align: right;
+  width: 614px;
+}
+/* line 171, ../sass/screen.scss */
+#menu ul li a, #menu ul li {
+  color: #7f7e7e;
+  display: inline-block;
+  position: relative;
+}
+/* line 177, ../sass/screen.scss */
+#menu ul li a:hover, #menu .active_menu {
+  color: #fbd744;
+}
+/* line 181, ../sass/screen.scss */
+#menu ul li {
+  padding-left: 48px;
+}
+
+/* --- PORTFOLIO OVERVIEW --- */
+/* line 189, ../sass/screen.scss */
+#projectenOverview li {
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 195px;
+  margin-bottom: 60px;
+  margin-right: 12px;
+  position: relative;
+  width: 312px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 205, ../sass/screen.scss */
+#projectenOverview li:nth-child(3n+3) {
+  margin-right: 0;
+}
+/* line 209, ../sass/screen.scss */
+#projectenOverview li .item {
+  display: block;
+  height: 160px;
+  margin-bottom: 9px;
+  position: relative;
+  width: 312px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 222, ../sass/screen.scss */
+#projectenOverview li .item img {
+  position: absolute;
+}
+/* line 226, ../sass/screen.scss */
+#projectenOverview li .item > span {
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 312px;
+  height: 160px;
+  background: black url(../images/plus.png) no-repeat bottom right;
+  background: rgba(0, 0, 0, 0.75) url(../images/plus.png) no-repeat bottom right;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 242, ../sass/screen.scss */
+#projectenOverview li.current .item > span {
+  background: #000 repeat;
+  background: rgba(0, 0, 0, 0.75) repeat;
+  opacity: 0.99 !important;
+  visibility: visible !important;
+}
+/* line 249, ../sass/screen.scss */
+#projectenOverview li:hover .item span, #projectenOverview li .item:hover span, #projectenOverview li .item:focus span {
+  opacity: 0.99;
+  visibility: visible;
+}
+/* line 254, ../sass/screen.scss */
+#projectenOverview li:hover .title, #projectenOverview li.current .title, #projectenOverview .title:hover, #projectenOverview .title:focus {
+  color: white;
+}
+
+/* --- PAGE INFO --- */
+/* line 260, ../sass/screen.scss */
+#infoOverview {
+  margin-top: 25px;
+}
+
+/* line 264, ../sass/screen.scss */
+.info_block {
+  color: #bdbcbc;
+  float: left;
+  font-size: 0.75em;
+  position: relative;
+  width: 294px;
+}
+/* line 271, ../sass/screen.scss */
+.info_block h2 {
+  color: #777575;
+  font-family: "Raleway";
+  font-size: 1.9em;
+  font-weight: 100;
+}
+/* line 278, ../sass/screen.scss */
+.info_block .info_content {
+  line-height: 150%;
+  margin-top: 180px;
+}
+/* line 281, ../sass/screen.scss */
+.info_block .info_content p {
+  margin-bottom: 20px;
+}
+/* line 286, ../sass/screen.scss */
+.info_block .info_link {
+  background-color: #dddddd;
+  color: white;
+  margin-top: 25px;
+  padding: 6px 8px 6px 8px;
+}
+/* line 292, ../sass/screen.scss */
+.info_block .info_link:hover {
+  color: #8a8989;
+}
+/* line 297, ../sass/screen.scss */
+.info_block img {
+  left: 20%;
+  position: absolute;
+  top: 50px;
+}
+/* line 303, ../sass/screen.scss */
+.info_block #illu_energie {
+  left: 30%;
+  top: -1px;
+}
+
+/* line 309, ../sass/screen.scss */
+#infoOverview div:nth-child(-n+2) {
+  margin-right: 18px;
+}
+
+/* --- PAGE OVER ONS --- */
+/* line 314, ../sass/screen.scss */
+#overons_team {
+  margin-top: 25px;
+}
+
+/* line 318, ../sass/screen.scss */
+.overons_block {
+  color: #a5a4a4;
+  float: left;
+  font-size: 0.8em;
+  line-height: 140%;
+  width: 300px;
+  word-wrap: break-word;
+}
+/* line 326, ../sass/screen.scss */
+.overons_block h2 {
+  color: #fbd744;
+  font-family: "Raleway";
+  font-size: 1.9em;
+  font-weight: 100;
+  margin-bottom: 30px;
+  margin-top: 27px;
+}
+/* line 335, ../sass/screen.scss */
+.overons_block h3 {
+  color: #777575;
+  margin-bottom: 12px;
+}
+/* line 340, ../sass/screen.scss */
+.overons_block .overons_links {
+  margin-bottom: 42px;
+  margin-top: 12px;
+}
+/* line 343, ../sass/screen.scss */
+.overons_block .overons_links:hover {
+  text-decoration: underline;
+}
+
+/* line 349, ../sass/screen.scss */
+#overons_block_2 {
+  margin-left: 6px;
+  width: 614px !important;
+}
+
+/* --- PAGE CONTACT --- */
+/* --- PAGE DETAIL --- */
+/* line 358, ../sass/screen.scss */
+#maximage {
+  position: relative;
+}
+
+/* line 362, ../sass/screen.scss */
+#holder {
+  height: 489px;
+  position: relative;
+  margin-top: 56px;
+  width: 920px;
+}
+
+/* line 371, ../sass/screen.scss */
+#arrows {
+  position: absolute;
+  top: 450px;
+}
+/* line 375, ../sass/screen.scss */
+#arrows #arrow_left, #arrows #arrow_right {
+  cursor: pointer;
+  float: left;
+}
+/* line 380, ../sass/screen.scss */
+#arrows #arrow_left {
+  margin-left: 7px;
+}
+/* line 384, ../sass/screen.scss */
+#arrows #arrow_right {
+  margin-left: 885px;
+}
+/* line 388, ../sass/screen.scss */
+#arrows #arrow_left:hover, #arrows #arrow_right:hover {
+  opacity: 0.75;
+}
+/* line 392, ../sass/screen.scss */
+#arrows #arrow_left:active, #arrows #arrow_right:active {
+  opacity: 0.75;
+}
+
+/* --- FOOTER --- */
+/* line 398, ../sass/screen.scss */
+#footer {
+  border-bottom: #eeeeee solid 1px;
+  border-top: #eeeeee solid 1px;
+  color: #7f7e7e;
+  font-size: 0.7em;
+  font-weight: normal;
+  height: 68px;
+  letter-spacing: 0.6px;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  padding-top: 34px;
+}
+/* line 410, ../sass/screen.scss */
+#footer a {
+  color: #7f7e7e;
+  text-decoration: underline;
+}
+/* line 413, ../sass/screen.scss */
+#footer a:hover {
+  color: #767676;
+}
+/* line 418, ../sass/screen.scss */
+#footer #footer_logo, #footer .footer_adres {
+  float: left;
+  background-image: url(../images/logo_lievens.png);
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+}
+/* line 429, ../sass/screen.scss */
+#footer .footer_adres {
+  line-height: 175%;
+  margin-left: 6px;
+  margin-right: 380px;
+}
+
+/*-------------------------*/
+/* = RESPONSIVE ELEMENTS */
+/*-------------------------*/
+@media screen and (min-width: 676px) and (max-width: 978px) {
+  /* line 442, ../sass/screen.scss */
+  #container {
+    width: 650px;
+  }
+
+  /* line 446, ../sass/screen.scss */
+  #header {
+    margin-bottom: 26px;
+    margin-left: 278px;
+    margin-top: 32px;
+  }
+
+  /* line 454, ../sass/screen.scss */
+  #projectenOverview li, #projectenOverview li:nth-child(3n+3) {
+    margin-bottom: 30px;
+    margin-right: 12px;
+  }
+
+  /* line 460, ../sass/screen.scss */
+  #pageAbout {
+    margin-left: 0px;
+  }
+  /* line 463, ../sass/screen.scss */
+  #pageAbout .email {
+    width: 200px;
+  }
+
+  /* line 468, ../sass/screen.scss */
+  #pageContact {
+    margin-left: 0px;
+  }
+
+  /* line 472, ../sass/screen.scss */
+  #holder {
+    margin-left: -200px;
+  }
+
+  /* line 476, ../sass/screen.scss */
+  #portfolio_detail {
+    margin-left: 100px;
+  }
+
+  /* line 481, ../sass/screen.scss */
+  #arrows #arrow_right {
+    margin-left: 632px;
+  }
+
+  /* line 486, ../sass/screen.scss */
+  #footer #socialMedia {
+    margin-left: 260px;
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 675px) {
+  /* line 493, ../sass/screen.scss */
+  #container {
+    width: 320px;
+  }
+
+  /* line 497, ../sass/screen.scss */
+  #header {
+    margin-bottom: 26px;
+    margin-left: 104px;
+    margin-top: 32px;
+  }
+
+  /* line 504, ../sass/screen.scss */
+  #menu ul li {
+    margin-bottom: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /* line 511, ../sass/screen.scss */
+  .menu_index {
+    margin-left: -160px;
+    width: 630px;
+  }
+
+  /* line 516, ../sass/screen.scss */
+  #projectenOverview li {
+    margin-bottom: 20px;
+  }
+
+  /* line 520, ../sass/screen.scss */
+  #pageAbout {
+    font-size: 0.8em;
+    margin-left: 0px;
+  }
+  /* line 524, ../sass/screen.scss */
+  #pageAbout h3 {
+    font-size: 1.2em;
+  }
+  /* line 528, ../sass/screen.scss */
+  #pageAbout .email {
+    width: 176px;
+  }
+  /* line 532, ../sass/screen.scss */
+  #pageAbout #camiFoto {
+    margin-left: 50px;
+  }
+
+  /* line 537, ../sass/screen.scss */
+  #pageContact {
+    margin-left: 0px;
+  }
+
+  /* line 541, ../sass/screen.scss */
+  #holder {
+    margin-left: -300px;
+  }
+
+  /* line 545, ../sass/screen.scss */
+  #portfolio_detail {
+    margin-left: 0px;
+    width: 320px;
+  }
+  /* line 550, ../sass/screen.scss */
+  #portfolio_detail .detail_links .back_to_overview {
+    margin-right: 120px;
+  }
+
+  /* line 556, ../sass/screen.scss */
+  #arrows {
+    margin-top: 57px;
+  }
+  /* line 558, ../sass/screen.scss */
+  #arrows #arrow_right {
+    margin-left: 285px;
+  }
+
+  /* line 563, ../sass/screen.scss */
+  #footer #socialMedia {
+    margin-left: 100px;
+  }
+}

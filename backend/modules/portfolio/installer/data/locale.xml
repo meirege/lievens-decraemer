@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+	<backend>
+		<core>
+			<item type="label" name="Portfolio">
+				<translation language="nl"><![CDATA[portfolio]]></translation>
+				<translation language="en"><![CDATA[portfolio]]></translation>
+			</item>
+			<item type="label" name="PortfolioWork">
+				<translation language="nl"><![CDATA[portfolio werken]]></translation>
+				<translation language="en"><![CDATA[portfolio work]]></translation>
+			</item>
+
+		</core>
+		<portfolio>
+			<item type="label" name="AddWork">
+				<translation language="nl"><![CDATA[werk toevoegen]]></translation>
+				<translation language="en"><![CDATA[add work]]></translation>
+			</item>
+			<item type="label" name="Contribution">
+				<translation language="nl"><![CDATA[mijn meerwaarde]]></translation>
+				<translation language="en"><![CDATA[my contribution]]></translation>
+			</item>
+			<item type="label" name="CreatedWith">
+				<translation language="nl"><![CDATA[gemaakt met]]></translation>
+				<translation language="en"><![CDATA[created with]]></translation>
+			</item>
+			<item type="label" name="HeaderImage">
+				<translation language="nl"><![CDATA[hoofd afbeelding]]></translation>
+				<translation language="en"><![CDATA[header image]]></translation>
+			</item>
+			<item type="label" name="CategoryTitle">
+				<translation language="nl"><![CDATA[categorie titel]]></translation>
+				<translation language="en"><![CDATA[category title]]></translation>
+			</item>
+			<item type="label" name="EditCategory">
+				<translation language="nl"><![CDATA[categorie bewerken]]></translation>
+				<translation language="en"><![CDATA[edit category]]></translation>
+			</item>
+			<item type="label" name="EditWork">
+				<translation language="nl"><![CDATA[werk bewerken]]></translation>
+				<translation language="en"><![CDATA[edit work]]></translation>
+			</item>
+			<item type="error" name="CategoryIsNotEmpty">
+				<translation language="nl"><![CDATA[Je kan een categorie die items bevat niet verwijderen.]]></translation>
+				<translation language="en"><![CDATA[You cannot remove a category that still has items linked to it.]]></translation>
+			</item>
+		</portfolio>
+	</backend>
+	<frontend>
+		<core>
+			
+		</core>
+	</frontend>
+</locale>

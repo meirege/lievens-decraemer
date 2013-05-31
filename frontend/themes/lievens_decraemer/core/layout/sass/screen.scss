@@ -1,0 +1,566 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--- Code voor SASS ---*/
+@import "compass/css3/images";
+$lightgrey: #dddddd;
+$lightgrey2: #7f7e7e;
+$lightgrey3: #8a8989;
+$darkgrey: #585757;
+$darkgrey2: #5d5d5d;
+$yellow: #fbd744;
+
+@mixin backgroundImg($url, $width, $height){
+	background-image: url($url);
+	background-repeat: no-repeat;
+	height: $height;
+	width: $width;
+}
+
+/*----------------------*/
+/*   =GENERAL ELEMENTS  */
+/*----------------------*/
+
+/* --- Fonts aanmaken --- */
+@font-face{
+	font-family:"NothingYouCouldDo";
+	src:url('../fonts/nothingyoucoulddo-webfont.eot?') format('eot'),
+	url('../fonts/nothingyoucoulddo-webfont.woff') format('woff'),
+	url('../fonts/nothingyoucoulddo-webfont.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+/*----------------------*/
+/*   =GENERAL ELEMENTS   */
+/*----------------------*/
+
+/* --- Algemeen --- */
+
+body{
+	background-color: #ffffff;
+	color: $darkgrey;
+	font-family: "Lucida Sans Unicode", Arial, "sans serif";
+	font-size: 1em;
+	font-weight: lighter;
+	position: relative;
+}
+
+#skipToContent, #socialMedia span{
+	position:absolute;
+	top:-10000px;
+}
+
+a{
+	color: $yellow;
+	text-decoration: none;
+}
+
+br{
+	clear: both;
+}
+
+/*----------------------*/
+/*   =GENERAL CLASSES   */
+/*----------------------*/
+
+/* --- Algemeen --- */
+
+.dummy{
+	clear:both;
+	height: 0px;
+}
+
+.baseline{
+	border-bottom: 1px solid #eeeeee;
+	color: $lightgrey;
+	font-family: "Raleway" serif; //Nass // Over the rainbow
+	font-size: 2em;
+	// font-style: italic;
+	font-weight: 100;
+	height: 116px; //147px - padding-top - nog wat
+	line-height: 125%;
+	padding-top: 20px;
+	text-align: right;
+
+	.baseline_author{
+		font-size: 0.5em;
+	}
+}
+
+/*----------------------*/
+/* =CONTAINING ELEMENTS */
+/*----------------------*/
+
+/* --- ALGEMEEN --- */
+#container{
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	position: relative;
+	width: 920px;
+}
+
+/* --- HEADER --- */
+#header_wrapper{
+	border-bottom: 1px solid #eeeeee;
+	height: 97px;
+	margin-bottom: 25px;
+}
+
+#header{
+	background-repeat: no-repeat;
+	font-weight: 100;
+	margin-top: 55px;
+
+	a{
+		color: $lightgrey2;
+	}
+	span{
+		color: $darkgrey;
+	}
+}
+
+/* --- MENU --- */
+
+#header, #menu{
+	float:left;
+	width: 306px;
+}
+
+#menu{
+	font-size: 0.85em;
+	font-weight: normal;
+	margin-top: 55px;
+	text-align: right;
+	width: 614px;
+
+	ul li a, ul li{
+		color: $lightgrey2;
+		display: inline-block;
+		position: relative;
+	}
+
+	ul li a:hover, .active_menu{
+		color: $yellow;
+	}
+
+	ul li{
+		padding-left: 48px;
+	}
+}
+
+/* --- PORTFOLIO OVERVIEW --- */
+
+#projectenOverview{
+	li{
+		cursor:pointer;
+		display:block;
+		float:left;
+		height:195px;
+		margin-bottom: 60px;
+		margin-right: 12px;
+		position:relative;
+		width:312px;
+		-webkit-transition:all 0.3s;
+		-moz-transition:all 0.3s;
+		-o-transition:all 0.3s;
+		-ms-transition:all 0.3s;
+		transition:all 0.3s;
+	}
+
+	li:nth-child(3n+3){
+		margin-right:0;
+	}
+
+	li .item{
+		display:block;
+		height:160px;
+		margin-bottom: 9px;
+		position:relative;
+		width:312px;
+		-webkit-transition:all 0.3s;
+		-moz-transition:all 0.3s;
+		-o-transition:all 0.3s;
+		-ms-transition:all 0.3s;
+		transition:all 0.3s;
+	}
+
+	li .item img{
+		position:absolute;
+	}
+
+	li .item >span{
+		z-index:20;
+		opacity:0;
+		visibility:hidden;
+		position:absolute;
+		width:312px;
+		height:160px;
+		background:#000 url(../images/plus.png) no-repeat bottom right;
+		background:rgba(0,0,0,0.75) url(../images/plus.png) no-repeat bottom right;
+		-webkit-transition:all 0.3s;
+		-moz-transition:all 0.3s;
+		-o-transition:all 0.3s;
+		-ms-transition:all 0.3s;
+		transition:all 0.3s;
+	}
+
+	li.current .item >span{
+		background:#000 repeat;
+		background:rgba(0,0,0,0.75) repeat;
+		opacity:0.99 !important;
+		visibility:visible !important;
+	}
+
+	li:hover .item span, li .item:hover span, li .item:focus span{
+		opacity:0.99;
+		visibility:visible;
+	}
+
+	li:hover .title, li.current .title, .title:hover, .title:focus{
+		color: lighten($lightgrey, 15%);
+	}
+}
+
+/* --- PAGE INFO --- */
+#infoOverview{
+	margin-top: 25px;
+}
+
+.info_block{
+	color: lighten($lightgrey3, 20%);
+	float: left;
+	font-size: 0.75em;
+	position: relative;
+	width: 294px;
+
+	h2{
+		color: lighten($darkgrey, 12%);
+		font-family: "Raleway";
+		font-size: 1.9em;
+		font-weight: 100;
+	}
+
+	.info_content{
+		line-height: 150%;
+		margin-top: 180px;
+		p{
+			margin-bottom: 20px;
+		}
+	}
+
+	.info_link{
+		background-color: $lightgrey;
+		color: white;
+		margin-top: 25px;
+		padding: 6px 8px 6px 8px;
+
+		&:hover{
+			color: $lightgrey3;
+		}
+	}
+
+	img{
+		left: 20%;
+		position: absolute;
+		top: 50px;
+	}
+
+	#illu_energie{
+		left: 30%;
+		top: -1px;
+	}
+}
+
+#infoOverview div:nth-child(-n+2){
+	margin-right: 18px;
+}
+
+/* --- PAGE OVER ONS --- */
+#overons_team{
+	margin-top: 25px;
+}
+
+.overons_block{
+	color: lighten($lightgrey2, 15%);
+	float: left;
+	font-size: 0.8em;
+	line-height: 140%;
+	width: 300px;
+	word-wrap: break-word;
+
+	h2{
+		color: $yellow;
+		font-family: "Raleway";
+		font-size: 1.9em;
+		font-weight: 100;
+		margin-bottom: 30px;
+		margin-top: 27px;
+	}
+
+	h3{
+		color: lighten($darkgrey, 12%);
+		margin-bottom: 12px;
+	}
+
+	.overons_links{
+		margin-bottom: 42px;
+		margin-top: 12px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+#overons_block_2{
+	margin-left: 6px;
+	width: 614px !important;
+}
+
+/* --- PAGE CONTACT --- */
+
+
+/* --- PAGE DETAIL --- */
+#maximage{
+	position: relative;
+}
+
+#holder{
+	height: 489px;
+	position: relative;
+	margin:{
+		top: 56px;
+	}
+	width: 920px;
+}
+
+#arrows{
+	position: absolute;
+	top: 450px;
+
+	#arrow_left, #arrow_right{
+		cursor: pointer;
+		float:left;
+	}
+
+	#arrow_left{
+		margin-left: 7px;
+	}
+
+	#arrow_right{
+		margin-left: 885px; //width 920 - 11 - 7
+	}
+
+	#arrow_left:hover, #arrow_right:hover{
+		opacity: 0.75;
+	}
+
+	#arrow_left:active, #arrow_right:active{
+		opacity: 0.75;
+	}
+}
+
+/* --- FOOTER --- */
+#footer{
+	border-bottom: #eeeeee solid 1px;
+	border-top: #eeeeee solid 1px;
+	color: $lightgrey2;
+	font-size: 0.7em;
+	font-weight: normal;
+	height: 68px; // 108height - 40padding
+	letter-spacing: 0.6px;
+	margin-bottom: 40px;
+	margin-top: 100px;
+	padding-top: 34px;
+
+	a{
+		color: $lightgrey2;
+		text-decoration: underline;
+		&:hover{
+			color: lighten($darkgrey2, 10%);
+		}
+	}
+
+	#footer_logo, .footer_adres{
+		float:left;
+		background:{
+			image: url(../images/logo_lievens.png);
+			repeat: no-repeat;
+		}
+		width: 35px;
+		height: 35px;
+
+	}
+
+	.footer_adres{
+		line-height: 175%;
+		margin-left: 6px;
+		margin-right: 380px;
+	}
+}
+
+/*-------------------------*/
+/* = RESPONSIVE ELEMENTS */
+/*-------------------------*/
+
+@media screen and (min-width:676px) and (max-width:978px){
+
+	#container{
+		width: 650px;
+	}
+
+	#header{
+		margin-bottom: 26px;
+		margin-left: 278px;
+		margin-top: 32px;
+	}
+
+
+	#projectenOverview{
+		li, li:nth-child(3n+3){
+			margin-bottom: 30px;
+			margin-right:12px;
+		}
+	}
+
+	#pageAbout{
+		margin-left: 0px;
+
+		.email{
+			width: 200px;
+		}
+	}
+
+	#pageContact{
+		margin-left: 0px;
+	}
+
+	#holder{
+		margin-left: -200px;
+	}
+
+	#portfolio_detail{
+		margin-left: 100px;
+	}
+
+	#arrows{
+		#arrow_right{
+			margin-left: 632px; //width 650 - 11 - 7
+		}
+	}
+
+	#footer #socialMedia{
+		margin-left: 260px;
+	}
+}
+
+@media screen and (min-width:250px) and (max-width:675px){
+
+	#container{
+		width: 320px;
+	}
+
+	#header{
+		margin-bottom: 26px;
+		margin-left: 104px;
+		margin-top: 32px;
+	}
+
+	#menu{
+		ul li{
+			margin-bottom: 3px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+
+	.menu_index{
+		margin-left: -160px;
+		width: 630px;
+	}
+
+	#projectenOverview li{
+			margin-bottom: 20px;
+	}
+
+	#pageAbout{
+		font-size: 0.8em;
+		margin-left: 0px;
+
+		h3{
+			font-size: 1.2em;
+		}
+
+		.email{
+			width: 176px;
+		}
+
+		#camiFoto{
+			margin-left: 50px;
+		}
+	}
+
+	#pageContact{
+		margin-left: 0px;
+	}
+
+	#holder{
+		margin-left: -300px;
+	}
+
+	#portfolio_detail{
+		margin-left: 0px;
+		width: 320px;
+
+		.detail_links{
+			.back_to_overview{
+				margin-right: 120px;
+			}
+		}
+	}
+
+	#arrows{
+		margin-top: 57px;
+		#arrow_right{
+			margin-left: 285px; //width 650 - 11 - 7
+		}
+	}
+
+	#footer #socialMedia{
+		margin-left: 100px;
+	}
+}
